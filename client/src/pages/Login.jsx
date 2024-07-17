@@ -1,78 +1,70 @@
 import { useState } from "react";
+
 const Login = () => {
   const [user, setUser] = useState({
     email: "",
     password: "",
   });
 
-  // handling input valuea
+  const handleInput = (event) => {
+    const { name, value } = event.target;
+    setUser({ ...user, [name]: value });
+  };
 
-const handleInput=(event)=>{
-  let name=event.target.name;
-  let value=event.target.value;
-
-  setUser({...user,[name]:value}); 
-};
-
-  // handling form submission
-
-  const handleSubmit=(event)=>{
+  const handleSubmit = (event) => {
     event.preventDefault();
-    alert(user);
+    alert(JSON.stringify(user, null, 2));
   };
 
   return (
-    <div>
-      <section>
-        <main>
+    <div className="login-page">
+      <section className="login-section">
+        <main className="login-main">
           <div className="section-login">
             <div className="container grid grid-two-cols">
               <div className="login-image">
                 <img
                   src="/images/tech-talk.jpeg"
                   alt="Error Loading Picture"
-                  width="400"
-                  height="400"
+                  className="login-image"
                 />
               </div>
-            </div>
-            <div className="login-form">
-              <h1 className="main-heading mb-3">Login Form</h1>
-              <br />
-              <form onSubmit={handleSubmit}>
-                <div>
-                  <label htmlFor="email">Email</label>
-                  <input
-                    type="text"
-                    name="email"
-                    placeholder="email"
-                    id="email"
-                    required
-                    autoComplete="off"
-                    value={user.email}
-                    onChange={handleInput}
-                  />
-                </div>
-                <div>
-                  <label htmlFor="password">Password</label>
-                  <input
-                    type="password"
-                    name="password"
-                    placeholder="password"
-                    id="password"
-                    required
-                    autoComplete="off"
-                    value={user.password}
-                    onChange={handleInput}
-                  />
-                </div>
-                <br />
-                <div>
-                  <button type="submit" className="btn-btn-submit">
+              <div className="login-form">
+                <h1 className="main-heading mb-3">Login Form</h1>
+                <form onSubmit={handleSubmit}>
+                  <div className="form-group">
+                    <label htmlFor="email">Email</label>
+                    <input
+                      type="email"
+                      name="email"
+                      placeholder="Email"
+                      id="email"
+                      required
+                      autoComplete="off"
+                      value={user.email}
+                      onChange={handleInput}
+                      className="form-input"
+                    />
+                  </div>
+                  <div className="form-group">
+                    <label htmlFor="password">Password</label>
+                    <input
+                      type="password"
+                      name="password"
+                      placeholder="Password"
+                      id="password"
+                      required
+                      autoComplete="off"
+                      value={user.password}
+                      onChange={handleInput}
+                      className="form-input"
+                    />
+                  </div>
+                  <button type="submit" className="btn-submit">
                     Login Now
                   </button>
-                </div>
-              </form>
+                </form>
+              </div>
             </div>
           </div>
         </main>

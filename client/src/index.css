@@ -279,3 +279,247 @@ footer .social-icons i {
   font-size: 18px;
 }
 
+/* Contact Us Page */
+
+.section-contact {
+  & .contact-content{
+    padding: 0;
+
+    & h1{
+      margin-bottom: 3.2rem;
+    }
+  }
+
+  & .container{
+    padding-top: 3.2rem;
+  }
+
+  & .contact-img{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    & img{
+      width: 80%;
+      height: auto;
+    }
+
+  }
+}
+
+& .section-form{
+  & form{
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+
+  }
+    & label{
+      display: block;
+      margin-bottom: 1.2rem;
+    }
+
+    & input, & textarea{
+      width:80%;
+      padding:0.4rem 0.6rem;
+    }
+}
+
+/* map */
+
+.full-width-map {
+  width: 100%; /* Make the iframe take the full width of its container */
+  height: 70vh; /* Make the iframe take the full height of the viewport */
+  border: 0; /* Remove the border */
+}
+
+/* Registration form css */
+
+/* Register.css */
+
+.register-page {
+  padding: 20px;
+}
+
+.register-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.register-main {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.section-registration {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 900px;
+}
+
+.grid-two-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.registration-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.registration-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  color: #ccc;
+}
+
+.main-heading {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.btn-submit {
+  width: 30%;
+  margin-top: 3px;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btn-submit:hover {
+  background-color: #0056b3;
+}
+
+/* Login page css */
+
+/* Login.css */
+
+.login-page {
+  padding: 20px;
+}
+
+.login-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.login-main {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.section-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 900px;
+}
+
+.grid-two-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.login-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  color: #ccc;
+}
+
+.main-heading {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.btn-submit {
+  width: 30%;
+  margin-top: 3px;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btn-submit:hover {
+  background-color: #0056b3;
+}
+
+
