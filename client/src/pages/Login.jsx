@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "../store/auth";
 
 const Login = () => {
   const [user, setUser] = useState({
@@ -6,14 +8,37 @@ const Login = () => {
     password: "",
   });
 
+  const navigate = useNavigate();
+  const { storetokenInLS } = useAuth();
+
   const handleInput = (event) => {
     const { name, value } = event.target;
     setUser({ ...user, [name]: value });
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    alert(JSON.stringify(user, null, 2));
+    try {
+      const response = await fetch("http://localhost:5000/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(user),
+      });
+
+      if (response.ok) {
+        const res_data = await response.json();
+        storetokenInLS(res_data.token);
+        alert("Login successful");
+        setUser({ email: "", password: "" });
+        navigate("/");
+      } else {
+        alert("Invalid Credentials");
+      }
+    } catch (e) {
+      console.error("Error:", e);
+    }
   };
 
   return (
